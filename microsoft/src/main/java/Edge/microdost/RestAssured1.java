@@ -17,7 +17,7 @@ public class RestAssured1 {
 	{
 		FileInputStream fs = new FileInputStream(new File(".\\JsonFileInput\\JsonFile.json"));
 		Response postResponse = RestAssured.given().auth().none().
-				header("Content-Type","application/jsgon")
+				header("Content-Type","application/json")
 				.contentType(ContentType.JSON)
 				.when()
 				.body(IOUtils.toString(fs,"UTF-8"))
